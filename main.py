@@ -3,6 +3,8 @@ import asyncio
 from spread_mexc_dex.factory import AbstractFactory, ArbitrageFactory
 from aiogram_bot.bot import TelegramBot
 
+from utils.logger import *
+
 TELEGRAM_BOT_TOKEN = "7830389967:AAFQBi_XlJo69NcbjSUXRgMsn77hhw_33MA"
 
 
@@ -39,8 +41,12 @@ async def main():
         # await arbitrage_manager.deconstruct_http_client()
         # await telegram_bot.close()
 
+
+def turn_off_debug():
+    logger.remove()
+
+
 if __name__ == "__main__":
     print("[INFO] Prod started")
     asyncio.run(main())
-
     # SWFTC
