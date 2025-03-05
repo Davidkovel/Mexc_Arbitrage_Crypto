@@ -10,8 +10,9 @@ class JsonParse:
             data_from_json = json.load(f)
             for key, value in data_from_json.items():
                 self.json_data[key] = {
-                   'contract_address': value['contract_address'],
-                   'chain': value['chain']
+                    'contract_address': value['contract_address'],
+                    'chain': value['chain'],
+                    'minimum_spread': value.get('minimum_spread', 6.0)
                 }
         return self.json_data
 

@@ -1,4 +1,5 @@
 spread_mexc_dex/tokens.json
+spread_mexc_dex/backup_tokens.json
 
 # testing prods
 test_prod.py

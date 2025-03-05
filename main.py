@@ -4,8 +4,9 @@ from spread_mexc_dex.factory import AbstractFactory, ArbitrageFactory
 from aiogram_bot.bot import TelegramBot
 
 from utils.logger import *
+from config import settings
 
-TELEGRAM_BOT_TOKEN = "7830389967:AAFQBi_XlJo69NcbjSUXRgMsn77hhw_33MA"
+TELEGRAM_BOT_TOKEN = settings.TELEGRAM_BOT_TOKEN
 
 
 async def run_bot(telegram_bot: TelegramBot):
@@ -30,8 +31,8 @@ async def main():
     telegram_bot = TelegramBot(token=TELEGRAM_BOT_TOKEN)
 
     factory = ArbitrageFactory(telegram_bot.send_message)
-
     try:
+        # await telegram_bot.send_message('fdsfdsfds', 4294967301)
         await asyncio.gather(
             run_bot(telegram_bot),  # Запуск бота
             run_arbitrage(factory)  # Запуск менеджера арбитража
@@ -50,3 +51,10 @@ if __name__ == "__main__":
     print("[INFO] Prod started")
     asyncio.run(main())
     # SWFTC
+
+
+# ПЛАНИ:
+# 1. env файл сделать
+# 2. Сделать конфиг файл
+# 3. Сделать докер файл
+# 4. Закинуть на сервер мб CI/CD

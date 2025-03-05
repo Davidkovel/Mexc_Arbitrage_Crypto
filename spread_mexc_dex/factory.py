@@ -3,8 +3,8 @@ from typing import Callable, Awaitable
 
 from spread_mexc_dex.parse_json import JsonParse
 from spread_mexc_dex.product import MexcAPI, DexApi
-from spread_mexc_dex.product2 import ArbitrageManager, PriceFetcher, SpreadCalculator, TokenManager, ArbitrageNotifier
-
+from spread_mexc_dex.product2 import ArbitrageManager, PriceFetcher, SpreadCalculator, ArbitrageNotifier
+from spread_mexc_dex.token_manager import TokenManager
 
 class AbstractFactory(ABC):
     @abstractmethod
@@ -35,6 +35,6 @@ class ArbitrageFactory(AbstractFactory):
             spread_calculator=spread_calculator,
             arbitrage_notifier=arbitrage_notifier,
             token_manager=token_manager,
-            mexcExchange=mexc_api,
-            dexExchange=dex_api,
+            mexc_exchange=mexc_api,
+            dex_exchange=dex_api,
         )

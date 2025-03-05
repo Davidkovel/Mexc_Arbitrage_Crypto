@@ -1,20 +1,16 @@
 import asyncio
 from typing import Dict, Set, Callable, Awaitable
 
-from spread_mexc_dex.product import DexApi, MexcAPI
-
 from utils.logger import *
+from spread_mexc_dex.product import DexApi, MexcAPI
+from spread_mexc_dex.token_manager import TokenManager, SpreadContext
+
 
 class PriceFetcher:
     def __init__(self, mexc_api: MexcAPI, dex_api: DexApi):
         self.mexc_api = mexc_api
         self.dex_api = dex_api
         # self.semaphore = asyncio.Semaphore(max_concurrent_requests)
-
-    # async def fetch_prices(self, token: str, address_contract: str, chain: str) -> tuple:
-    #     price_mexc = await self.mexc_api.get_price_coin(token)
-    #     price_dex = await self.dex_api.get_price_coin(token, address_contract, chain)
-    #     return token, price_mexc, price_dex
 
     async def fetch_prices(self, token: str, address_contract: str, chain: str) -> tuple:
         price_mexc = await self.mexc_api.get_price_coin(token)
@@ -44,47 +40,42 @@ class ArbitrageNotifier:
     def __init__(self, send_telegram_message: Callable[[str], Awaitable[None]]):
         self.send_telegram_message = send_telegram_message
 
-    async def notify(self, token: str, spread: float, price_mexc: float, price_dex: float):
+    async def notify(self, token: str, spread: float, price_mexc: float, price_dex: float, contract_address: str,
+                     chain: str):
+        dex_url = f"https://dexscreener.com/{chain.lower()}/{contract_address}"
+        mexc_url = f"https://futures.mexc.com/exchange?symbol={token}_USDT"
+
         message = (
-            f"[INFO] Arbitrage found for {token}: Spread = {spread:.2f}%\n"
-            f"📈 Mexc Price: {price_mexc}\n"
-            f"📉 Dex Price: {price_dex}"
+            f"*Монета:* `{token}`\n"
+            f"*Спред:* `{spread:.2f}%`\n\n"
+            f"*MEXC Цена:* `{price_mexc}$`\n\n"
+            f"*DEX Цена:* `{price_dex}$`\n"
+            f"*Контракт:* `{contract_address}`\n"
+            f"*Сеть:* `{chain}`\n\n"
+            f"[🔗 Перейти на DEX]({dex_url}) | [🔗 Перейти на MEXC]({mexc_url})\n\n"
+            f"🖋️ Created by [XGenius PRO]\n"
         )
         logger.info(message)
-       # await self.send_telegram_message(message)
-
-
-class TokenManager:
-    def __init__(self, list_tokens: Dict[str, dict]):
-        self.list_tokens = list_tokens
-        self.cooldown_tokens: Set[str] = set()
-
-    def get_tokens(self) -> Dict[str, dict]:
-        return {k: v for k, v in self.list_tokens.items() if k not in self.cooldown_tokens}
-
-    async def add_to_cooldown(self, token: str, cooldown_time: int):
-        self.cooldown_tokens.add(token)
-        await asyncio.sleep(cooldown_time)
-        self.cooldown_tokens.remove(token)
-        logger.info(f"[INFO] {token} is back in rotation")
+        await self.send_telegram_message(message, message_thread_id=4294967301, dex_url=dex_url, mexc_url=mexc_url)
 
 
 class ArbitrageManager:
     def __init__(
-        self,
-        price_fetcher: PriceFetcher,
-        spread_calculator: SpreadCalculator,
-        arbitrage_notifier: ArbitrageNotifier,
-        token_manager: TokenManager,
-        mexcExchange: MexcAPI,
-        dexExchange: DexApi
+            self,
+            price_fetcher: PriceFetcher,
+            spread_calculator: SpreadCalculator,
+            arbitrage_notifier: ArbitrageNotifier,
+            token_manager: TokenManager,
+            mexc_exchange: MexcAPI,
+            dex_exchange: DexApi
     ):
         self.price_fetcher = price_fetcher
         self.spread_calculator = spread_calculator
         self.arbitrage_notifier = arbitrage_notifier
         self.token_manager = token_manager
-        self.mexcExchange = mexcExchange
-        self.dexExchange = dexExchange
+        self.spread_context = SpreadContext(token_manager)
+        self.mexcExchange = mexc_exchange
+        self.dexExchange = dex_exchange
 
     async def init_http_client(self):
         await self.mexcExchange.init()
@@ -92,23 +83,31 @@ class ArbitrageManager:
 
     async def process_token(self, token_info):
         try:
-            # Запрашиваем цены для текущего токена
-            result = await self.price_fetcher.fetch_prices(**token_info)
+            token, contract_address, chain = token_info["token"], token_info["address_contract"], token_info["chain"]
+            result = await self.price_fetcher.fetch_prices(token, contract_address, chain)
             token, price_mexc, price_dex = result
 
-            #logger.info(f'CHECKING {token}, {price_mexc} - {price_dex} ')
+            # logger.info(f'CHECKING {token}, {price_mexc} - {price_dex} ')
             if "error" in price_dex or "error" in price_mexc:
                 logger.error(f"[ERROR] Ошибка получения цен: {token} MEXC: {price_mexc}, DEX: {price_dex}")
                 return
 
             spread = self.spread_calculator.calculate_spread(price_mexc["price"], price_dex["price"], mexc_higher=True)
 
-            # Если спред больше 7%, уведомляем
-            if spread > 6:
-                await self.arbitrage_notifier.notify(token, spread, price_mexc["price"], price_dex["price"])
+            minimum_spread = token_info.get('minimum_spread', 6.0)
+            # if spread > minimum_spread:
+            #     await self.arbitrage_notifier.notify(token, spread, price_mexc["price"], price_dex["price"],
+            #                                          contract_address, chain)
+            #     logger.info(f"[INFO] Sleeping for 1 minute for {token} to avoid spam...")
+            #     asyncio.create_task(self.token_manager.add_to_cooldown(token, 500))
+            result_spread = self.spread_context.handle_spread(token, spread, minimum_spread)
+            has_spread, thread_id = result_spread['Has_spread'], result_spread['thread_id']
+            if has_spread:
+                await self.arbitrage_notifier.notify(token, spread, price_mexc["price"], price_dex["price"],
+                                                     contract_address, chain)
                 logger.info(f"[INFO] Sleeping for 1 minute for {token} to avoid spam...")
-                asyncio.create_task(self.token_manager.add_to_cooldown(token, 120))
 
+                # asyncio.create_task(self.token_manager.add_to_cooldown(token, 20))
         except Exception as ex:
             logger.error(f"Failed to fetch prices for {token_info['token']}: {ex}")
 
@@ -135,15 +134,16 @@ class ArbitrageManager:
                 token_info = {
                     "token": token,
                     "address_contract": details['contract_address'],
-                    "chain": details['chain']
+                    "chain": details['chain'],
+                    "minimum_spread": details.get('minimum_spread', 6.0)
                 }
                 await queue.put(token_info)  # Добавляем токен в очередь
 
             # Ждем, пока все задачи в очереди будут выполнены
             await queue.join()
 
-            logger.info('Sleeping for 10 seconds before the next iteration...')
-            await asyncio.sleep(10)
+            logger.info('Sleeping for 30 seconds before the next iteration...')
+            await asyncio.sleep(30)
 
             #     tasks.append(self.price_fetcher.fetch_prices(**token_info))
             #     await asyncio.sleep(0.05)
@@ -172,9 +172,6 @@ class ArbitrageManager:
             #
             # print('sleeping')
             # await asyncio.sleep(10)
-
-
-
 
 #
 #

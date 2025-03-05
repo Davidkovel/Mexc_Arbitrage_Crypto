@@ -1,22 +1,23 @@
 import time
 from abc import ABC, abstractmethod
-
 import asyncio
 from collections import deque
-
 import aiohttp
 
 from random import uniform
-
 from aiohttp import BasicAuth
 
+from config import settings
 from utils.logger import *
 
 
 
-proxies = [
-   # {"url": "http://XXX:XXX", "login": "XXXX", "password": "XXXXX"},
-]
+# 185.80.149.5:22225:djzbXm91cp:3Va7NTEPoQ
+# 37.9.48.123:16648:I45nH9d8sD:MvF7CUQE3G
+# 89.19.218.41:33867:ZyGNOY34DF:K6fNZIdOj8
+# 45.84.3.155:21981:ghK4XI9duw:D163qeVIsZ
+# 45.153.72.144:37262:AWhPuFTU4p:EwRyIUdL3J
+proxies = settings.PROXIES
 
 
 class ExchangeApi(ABC):
@@ -99,7 +100,6 @@ class DexApi(ExchangeApi):
         retry_count = 0
         while retry_count <= self.max_retries:
             try:
-                # Получаем текущий прокси и аутентификацию
                 proxy_info = self.proxies[self.current_proxy_index]
                 proxy_url = proxy_info["url"]
                 proxy_auth = BasicAuth(proxy_info["login"], proxy_info["password"])
@@ -113,27 +113,36 @@ class DexApi(ExchangeApi):
                             # Меняем прокси только если это последняя попытка
                             if retry_count == self.max_retries - 1:
                                 self.current_proxy_index = (self.current_proxy_index + 1) % len(self.proxies)
-                                logger.warning(
-                                    f"Dex rate limit exceeded. Switching to proxy: {self.proxies[self.current_proxy_index]['url']}")
+                                # logger.warning(
+                                    # f"Dex rate limit exceeded. Switching to proxy: {self.proxies[self.current_proxy_index]['url']}")
 
                             # Экспоненциальная backoff-задержка
                             delay = self.retry_delay * (2 ** retry_count) + uniform(0, 1)
-                            logger.warning(f"Dex rate limit exceeded. Retrying in {delay:.2f} seconds...")
+                            # logger.warning(f"Dex rate limit exceeded. Retrying in {delay:.2f} seconds...")
                             await asyncio.sleep(delay)
                             retry_count += 1
                             continue  # Повторяем запрос
                         else:
+                            await asyncio.sleep(1)
                             logger.error(f"Dex rate limit exceeded after {self.max_retries} retries")
                             return {"error": "Rate limit exceeded"}
 
                     if response.status != 200:
                         logger.error(f"Dex HTTP error {response.status}")
-                        return {"error": "HTTP error"}
+                        return {"error": "HTTP getting price error"}
 
                     response_data = await response.json()
-                    price_usd = response_data[0]["priceUsd"]
-                    # logger.info(f'dex: {coin} - {price_usd}')
-                    return {"price": float(price_usd)}
+                    for index, data in enumerate(response_data):
+                        vol_24 = response_data[index]["volume"]["h24"]
+                        vol_6 = response_data[index]["volume"]["h6"]
+                        vol_1 = response_data[index]["volume"]["h1"]
+                        if vol_24 > 0 and vol_6 > 0 and vol_1 > 0:
+                            price_usd = response_data[index]["priceUsd"]
+
+                            # logger.info(f'dex: {coin} - {price_usd}')
+                            return {"price": float(price_usd), "vol_24": vol_24, "vol_6": vol_6, "vol_1": vol_1}
+
+                    return {"price": 0}
 
             except Exception as ex:
                 logger.error(f"Dex exception: {ex} - {coin}")
