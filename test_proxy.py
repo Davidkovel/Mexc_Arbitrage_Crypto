@@ -3,9 +3,15 @@ import asyncio
 from aiohttp import BasicAuth
 import random
 
-from config import settings
-
-proxies = settings.TEST_PROXY
+proxies = [
+    {"url": "http://45.153.20.239:13833", "login": "KYxvu1", "password": "Gq1DhW"},
+    {"url": "http://185.80.149.5:22225", "login": "djzbXm91cp", "password": "3Va7NTEPoQ"},
+    {"url": "http://37.9.48.123:16648", "login": "I45nH9d8sD", "password": "MvF7CUQE3G"},
+    {"url": "http://89.19.218.41:33867", "login": "ZyGNOY34DF", "password": "K6fNZIdOj8"},
+    {"url": "http://45.84.3.155:21981", "login": "ghK4XI9duw", "password": "D163qeVIsZ"},
+    {"url": "http://45.153.72.144:37262", "login": "AWhPuFTU4p", "password": "EwRyIUdL3J"},
+    {"url": "http://185.66.14.18:9579", "login": "oWktPS", "password": "RBDn7L"},
+]
 
 
 class TestProxy:
