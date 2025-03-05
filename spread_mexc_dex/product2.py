@@ -103,6 +103,7 @@ class ArbitrageManager:
             result_spread = self.spread_context.handle_spread(token, spread, minimum_spread)
             has_spread, thread_id = result_spread['Has_spread'], result_spread['thread_id']
             if has_spread:
+               # logger.info(f"F {price_dex["h1"]}  {price_dex["h24"]} {price_dex["h6"]}")
                 await self.arbitrage_notifier.notify(token, spread, price_mexc["price"], price_dex["price"],
                                                      contract_address, chain)
                 logger.info(f"[INFO] Sleeping for 1 minute for {token} to avoid spam...")
@@ -124,7 +125,7 @@ class ArbitrageManager:
         queue = asyncio.Queue()  # Создаем очередь задач
 
         # Создаем и запускаем воркеры
-        workers = [asyncio.create_task(self.worker(queue)) for _ in range(10)]  # 10 воркеров
+        workers = [asyncio.create_task(self.worker(queue)) for _ in range(10)]
 
         while True:
             tokens = self.token_manager.get_tokens()
@@ -145,126 +146,4 @@ class ArbitrageManager:
             logger.info('Sleeping for 30 seconds before the next iteration...')
             await asyncio.sleep(30)
 
-            #     tasks.append(self.price_fetcher.fetch_prices(**token_info))
-            #     await asyncio.sleep(0.05)
-            #
-            # # results = await asyncio.gather(*tasks, return_exceptions=True)
-            # for task in asyncio.as_completed(tasks):
-            #     try:
-            #         result = await task
-            #         token, price_mexc, price_dex = result
-            #         if isinstance(result, Exception):
-            #             print(f"[ERROR] Failed to fetch prices: {result}")
-            #             continue
-            #
-            #         if "error" in price_dex or "error" in price_mexc:
-            #             print(f"[ERROR] Ошибка получения цен: {token} MEXC: {price_mexc}, DEX: {price_dex}")
-            #             continue
-            #
-            #         spread = self.spread_calculator.calculate_spread(price_mexc["price"], price_dex["price"])
-            #
-            #         if spread > 7:
-            #             await self.arbitrage_notifier.notify(token, spread, price_mexc["price"], price_dex["price"])
-            #             print(f"[INFO] Sleeping for 1 minute for {token} to avoid spam...")
-            #             asyncio.create_task(self.token_manager.add_to_cooldown(token, 120))
-            #     except Exception as ex:
-            #         print(f"[ERROR] Failed to fetch prices: {ex}")
-            #
-            # print('sleeping')
-            # await asyncio.sleep(10)
 
-#
-#
-# class ArbitrageManager:
-#     def __init__(self):
-#         parser = JsonParse()
-#         self.mexcExchange = MexcAPI()
-#         self.dexExchange = DexApi()
-#         self.list_tokens: dict = parser.parse()
-#         self.cooldown_tokens = set()
-#
-#     async def init_http_client(self):
-#         await self.mexcExchange.init()
-#         await self.dexExchange.init()
-#
-#     async def fetch_prices(self, **kwargs):
-#         token = kwargs["token"]
-#         address_contract = kwargs["address_contract"]
-#         chain = kwargs["chain"]
-#
-#         price_mexc = await self.mexcExchange.get_price_coin(token)
-#         price_dex = await self.dexExchange.get_price_coin(token, address_contract, chain)
-#         return token, price_mexc, price_dex
-#
-#     @staticmethod
-#     def calculate_spread(price1: float, price2: float) -> float:
-#         """
-#         Рассчитывает спред между двумя ценами в процентах.
-#         """
-#         # print(f"Price1: {price1}, Price2: {price2}")
-#         if price1 == 0 or price2 == 0:
-#             return 0.0
-#         return abs((price1 - price2) / ((price1 + price2) / 2)) * 100
-#
-#     async def run_find_arbitrage(self, send_telegram_message):
-#         await self.init_http_client()
-#
-#         while True:
-#             tasks = []  # List of tasks for asyncio
-#
-#             for token, details in self.list_tokens.items():
-#                 if token in self.cooldown_tokens:
-#                     continue
-#
-#                 token_info = {
-#                     "token": token,
-#                     "address_contract": details['contract_address'],
-#                     "chain": details['chain']
-#                 }
-#                 tasks.append(self.fetch_prices(**token_info))
-#
-#             # Запускаем все задачи параллельно
-#             results = await asyncio.gather(*tasks, return_exceptions=True)
-#
-#             for result in results:
-#                 if isinstance(result, Exception):
-#                     print(f"[ERROR] Failed to fetch prices: {result}")
-#                     continue
-#
-#                 token, price_mexc, price_dex = result
-#
-#                 if "error" in price_dex or "error" in price_mexc:
-#                     print(f"[ERROR] Ошибка получения цен: MEXC: {price_mexc}, DEX: {price_dex}")
-#                     return
-#
-#                 spread = self.calculate_spread(price_mexc["price"], price_dex["price"])
-#
-#                 if spread > 7:
-#                     message = (
-#                         f"[INFO] Arbitrage found for {token}: Spread = {spread:.2f}%\n"
-#                         f"📈 Mexc Price: {price_mexc['price']}\n"
-#                         f"📉 Dex Price: {price_dex['price']}"
-#                     )
-#                     await send_telegram_message(message)
-#
-#                     print(f"[INFO] Sleeping for 1 minute for {token} to avoid spam...")
-#
-#                     self.cooldown_tokens.add(token)
-#                     asyncio.create_task(self.remove_from_cooldown(token))
-#
-#                 #     print(f"[INFO] Arbitrage found for {token}: Spread = {spread:.2f}%")
-#                 #     print(f"  Mexc Price: {price_mexc['price']}, Dex Price: {price_dex['price']}")
-#                 # else:
-#                 #     print(f"[INFO] No arbitrage for {token}: Spread = {spread:.2f}%")
-#             # print('---')
-#             await asyncio.sleep(12)
-#             # await self.deconstruct_http_client()
-#
-#     async def remove_from_cooldown(self, token):
-#         await asyncio.sleep(140)  # Ждем минуту
-#         self.cooldown_tokens.remove(token)  # Убираем токен из списка тайм-аута
-#         print(f"[INFO] {token} is back in rotation")
-#
-#     async def deconstruct_http_client(self):
-#         await self.mexcExchange.close()
-#         await self.dexExchange.close()

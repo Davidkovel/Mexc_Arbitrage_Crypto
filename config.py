@@ -9,12 +9,12 @@ class Settings(BaseSettings):
     API_KEY: str
     API_SECRET: str
     PROXIES: List[Dict[str, str]]
-    TEST_PROXIES: List[Dict[str, str]]
+    TEST_PROXIES: List[Dict[str, str]] = []
 
 
 settings = Settings()
 
-print("Telegram Bot Token:", settings.TELEGRAM_BOT_TOKEN)
-print("API Key:", settings.API_KEY)
-print("API Secret:", settings.API_SECRET)
-print("Proxies:", settings.PROXIES)
+# print("Telegram Bot Token:", settings.TELEGRAM_BOT_TOKEN)
+# print("API Key:", settings.API_KEY)
+# print("API Secret:", settings.API_SECRET)
+# print("Proxies:", settings.PROXIES)
