@@ -1,0 +1,899 @@
+{
+  "PIN": {
+    "contract_address": "0x2e44f3f609ff5aA4819B323FD74690f07C3607c4",
+    "chain": "Ethereum"
+  },
+  "AKUMA": {
+    "contract_address": "0x2F20Cf3466f80A5f7f532fCa553c8cbc9727FEf6",
+    "chain": "BASE"
+  },
+  "1DOLLAR": {
+    "contract_address": "GHichsGq8aPnqJyz6Jp1ASTK4PNLpB5KrD6XrfDjpump",
+    "chain": "Solana"
+  },
+  "VINE": {
+    "contract_address": "6AJcP7wuLwmRYLBNbi825wgguaPsWzPBEHcHndpRpump",
+    "chain": "Solana"
+  },
+  "GRPH": {
+    "contract_address": "9doRRAik5gvhbEwjbZDbZR6GxXSAfdoomyJR57xKpump",
+    "chain": "Solana",
+    "minimum_spread": 4
+  },
+  "STNK": {
+    "contract_address": "43VWkd99HjqkhFTZbWBpMpRhjG469nWa7x7uEsgSH7We",
+    "chain": "Solana"
+  },
+  "ALON": {
+    "contract_address": "8XtRWb4uAAJFMP4QQhoYYCWR6XXb7ybcCdiqPwz9s5WS",
+    "chain": "Solana",
+    "minimum_spread": 4
+  },
+  "CLAY": {
+    "contract_address": "EQB-vc00g9PeUWLptSAH4g1J5kYS7WTgtVEfhI6oKdQtRudE",
+    "chain": "Ton",
+    "minimum_spread": 5.5
+  },
+  "ELONSOL": {
+    "contract_address": "BftUiGB2iDkNDa8AKdhtLuJHHXiUfqLvTNmiXaSopump",
+    "chain": "Solana"
+  },
+  "TAOCAT": {
+    "contract_address": "0x7A5f5CcD46EBd7aC30615836D988ca3BD57412b3",
+    "chain": "BASE"
+  },
+  "SAFEMOONSOL": {
+    "contract_address": "2kGfWRgNp1QaxUMFCX9CMN78E1iCbgjBAZuQNUjWpump",
+    "chain": "Solana",
+    "minimum_spread": 4
+  },
+  "DOGEGOV": {
+    "contract_address": "0x1121AcC14c63f3C872BFcA497d10926A6098AAc5",
+    "chain": "Ethereum"
+  },
+  "NEUR": {
+    "contract_address": "3N2ETvNpPNAxhcaXgkhKoY1yDnQfs41Wnxsx5qNJpump",
+    "chain": "Solana"
+  },
+  "CULT": {
+    "contract_address": "0x0000000000c5dc95539589fbD24BE07c6C14eCa4",
+    "chain": "Ethereum",
+    "minimum_spread": 4
+  },
+  "DOGEAI": {
+    "contract_address": "9UYAYvVS2cZ3BndbsoG1ScJbjfwyEPGxjE79hh5ipump",
+    "chain": "Solana"
+  },
+  "STPT": {
+    "contract_address": "0xDe7D85157d9714EADf595045CC12Ca4A5f3E2aDb",
+    "chain": "Ethereum"
+  },
+  "SCR": {
+    "contract_address": "0xd29687c813D741E2F938F4aC377128810E217b1b",
+    "chain": "SCROLL"
+  },
+  "G": {
+    "contract_address": "0x9C7BEBa8F6eF6643aBd725e45a4E8387eF260649",
+    "chain": "Ethereum"
+  },
+  "J": {
+    "contract_address": "Jambjx1oJoZNBZiqbiF9TqgatEZPdyfvYa9WVsKNzUh",
+    "chain": "Solana"
+  },
+  "T": {
+    "contract_address": "0xCdF7028ceAB81fA0C6971208e83fa7872994beE5",
+    "chain": "Ethereum"
+  },
+  "W": {
+    "contract_address": "85VBFQZC9TZkfaptBWjvUw7YbZjy52A6mjtPGjstQAmQ",
+    "chain": "Solana"
+  },
+  "X": {
+    "contract_address": "EQB4zZusHsbU2vVTPqjhlokIOoiZhEdCMT703CWEzhTOo__X",
+    "chain": "Ton"
+  },
+  "SFP": {
+    "contract_address": "0xd41fdb03ba84762dd66a0af1a6c8540ff1ba5dfb",
+    "chain": "Bsc"
+  },
+  "BEL": {
+    "contract_address": "0xa91ac63d040deb1b7a5e4d4134ad23eb0ba07e14",
+    "chain": "Ethereum"
+  },
+  "STRK": {
+    "contract_address": "0x04718f5a0fc34cc1af16a1cdee98ffb20c31f5cd61d6ab07201858f4287c938d",
+    "chain": "Starknet"
+  },
+  "BID": {
+    "contract_address": "0xa1832f7F4e534aE557f9B5AB76dE54B1873e498B",
+    "chain": "Bsc"
+  },
+  "BIO": {
+    "contract_address": "0xcb1592591996765Ec0eFc1f92599A19767ee5ffA",
+    "chain": "Ethereum"
+  },
+  "WOJAK": {
+    "contract_address": "0x5026F006B85729a8b14553FAE6af249aD16c9aaB",
+    "chain": "Ethereum"
+  },
+  "SKL": {
+    "contract_address": "0x00c83aecc790e8a4453e5dd3b0b4b3680501a7a7",
+    "chain": "Ethereum"
+  },
+  "SLP": {
+    "contract_address": "0xcc8fa225d80b9c7d42f96e9570156c65d6caaa25",
+    "chain": "Ethereum"
+  },
+  "MICHI": {
+    "contract_address": "5mbK36SZ7J19An8jFochhQS4of8g6BwUjbeCSxBSoWdp",
+    "chain": "Solana"
+  },
+  "BLZ": {
+    "contract_address": "0x5732046A883704404F284Ce41FfADd5b007FD668",
+    "chain": "Ethereum"
+  },
+  "SNT": {
+    "contract_address": "0x744d70fdbe2ba4cf95131626614a1763df805b9e",
+    "chain": "Ethereum"
+  },
+  "SNX": {
+    "contract_address": "0xc011a73ee8576fb46f5e1c5751ca3b9fe0af2a6f",
+    "chain": "Ethereum"
+  },
+  "API3": {
+    "contract_address": "0x0b38210ea11411557c13457D4dA7dC6ea731B88a",
+    "chain": "Ethereum"
+  },
+  "BNT": {
+    "contract_address": "0x1f573d6fb3f13d689ff844b4ce37794d79a7ff1c",
+    "chain": "Ethereum"
+  },
+  "SPX": {
+    "contract_address": "0xE0f63A424a4439cBE457D80E4f4b51aD25b2c56C",
+    "chain": "Ethereum"
+  },
+  "SQD": {
+    "contract_address": "0x1337420dED5ADb9980CFc35f8f2B054ea86f8aB1",
+    "chain": "Arbitrum"
+  },
+  "NEON": {
+    "contract_address": "NeonTjSjsuo3rexg9o6vHuMXw62f9V7zvmu8M8Zut44",
+    "chain": "Solana"
+  },
+  "SSV": {
+    "contract_address": "0x9d65ff81a3c488d585bbfb0bfe3c7707c7917f54",
+    "chain": "Ethereum"
+  },
+  "STG": {
+    "contract_address": "0xB0D502E938ed5f4df2E681fE6E419ff29631d62b",
+    "chain": "Bsc"
+  },
+  "MBOX": {
+    "contract_address": "0x3203c9e46ca618c8c1ce5dc67e7e9d75f5da2377",
+    "chain": "Bsc"
+  },
+  "BSX": {
+    "contract_address": "0xD47F3E45B23b7594F5d5e1CcFde63237c60BE49e",
+    "chain": "BASE"
+  },
+  "BSW": {
+    "contract_address": "0x965f527d9159dce6288a2219db51fc6eef120dd1",
+    "chain": "Bsc"
+  },
+  "FLUID": {
+    "contract_address": "0x6f40d4a6237c257fff2db00fa0510deeecd303eb",
+    "chain": "Ethereum",
+    "minimum_spread": 4
+  },
+  "GAMEVIRTUAL": {
+    "contract_address": "0x1C4CcA7C5DB003824208aDDA61Bd749e55F463a3",
+    "chain": "BASE"
+  },
+  "KMNO": {
+    "contract_address": "KMNo3nJsBXfcpJTVhZcXLW7RmTwTt4GVFE7suUBo9sS",
+    "chain": "Solana"
+  },
+  "C98": {
+    "contract_address": "0xaec945e04baf28b135fa7c640f624f8d90f1c3a6",
+    "chain": "Bsc"
+  },
+  "SYN": {
+    "contract_address": "0x0f2D719407FdBeFF09D87557AbB7232601FD9F29",
+    "chain": "Ethereum"
+  },
+  "NEXO": {
+    "contract_address": "0xb62132e35a6c13ee1ee0f84dc5d40bad8d815206",
+    "chain": "Ethereum"
+  },
+  "RACA": {
+    "contract_address": "0x12bb890508c125661e03b09ec06e404bc9289040",
+    "chain": "Bsc"
+  },
+  "BZZ": {
+    "contract_address": "0x19062190b1925b5b6689d7073fdfc8c2976ef8cb",
+    "chain": "Ethereum"
+  },
+  "TREAT": {
+    "contract_address": "0xa02C49Da76A085e4E1EE60A6b920dDbC8db599F4",
+    "chain": "Ethereum"
+  },
+  "KEKIUS": {
+    "contract_address": "0x26E550AC11B26f78A04489d5F20f24E3559f7Dd9",
+    "chain": "Ethereum"
+  },
+  "TAI": {
+    "contract_address": "Hax9LTgsQkze1YFychnBLtFH8gYbQKtKfWKKg2SP6gdD",
+    "chain": "Solana"
+  },
+  "MOBILE": {
+    "contract_address": "mb1eu7TzEc71KxDpsmsKoucSSuuoGLv1drys1oP2jh6",
+    "chain": "Solana"
+  },
+  "CAT": {
+    "contract_address": "0x6894CDe390a3f51155ea41Ed24a33A4827d3063D",
+    "chain": "Bsc"
+  },
+  "GALA": {
+    "contract_address": "0xd1d2Eb1B1e90B638588728b4130137D262C87cae",
+    "chain": "Ethereum"
+  },
+  "TEL": {
+    "contract_address": "0x467Bccd9d29f223BcE8043b84E8C8B282827790F",
+    "chain": "Ethereum"
+  },
+  "VELODROME": {
+    "contract_address": "0x9560e827aF36c94D2Ac33a39bCE1Fe78631088Db",
+    "chain": "Optimism"
+  },
+  "GROK": {
+    "contract_address": "0x8390a1DA07E376ef7aDd4Be859BA74Fb83aA02D5",
+    "chain": "Ethereum"
+  },
+  "GANG": {
+    "contract_address": "d4VVNcnhYwenMzJJk7QgZsxVbLQSijPSLB8m7gKMGFM",
+    "chain": "Solana"
+  },
+  "THE": {
+    "contract_address": "0xF4C8E32EaDEC4BFe97E0F595AdD0f4450a863a11",
+    "chain": "Bsc"
+  },
+  "STORJ": {
+    "contract_address": "0xb64ef51c888972c908cfacf59b47c1afbc0ab8ac",
+    "chain": "Ethereum"
+  },
+  "RARE": {
+    "contract_address": "0xba5BDe662c17e2aDFF1075610382B9B691296350",
+    "chain": "Ethereum"
+  },
+  "CHZ": {
+    "contract_address": "0x3506424f91fd33084466f402d5d97f05f8e3b4af",
+    "chain": "Ethereum"
+  },
+  "TLM": {
+    "contract_address": "0x2222227e22102fe3322098e4cbfe18cfebd57c95",
+    "chain": "Bsc"
+  },
+  "ELON": {
+    "contract_address": "0x761d38e5ddf6ccf6cf7c55759d5210750b5d60f3",
+    "chain": "Ethereum"
+  },
+  "TOKEN": {
+    "contract_address": "0x4507cEf57C46789eF8d1a19EA45f4216bae2B528",
+    "chain": "Bsc"
+  },
+  "COW": {
+    "contract_address": "0xdef1ca1fb7fbcdc777520aa7f396b4e015f497ab",
+    "chain": "Ethereum"
+  },
+  "TRU": {
+    "contract_address": "0x4c19596f5aaff459fa38b0f7ed92f11ae6543784",
+    "chain": "Ethereum"
+  },
+  "HIPPO": {
+    "contract_address": "0x8993129d72e733985f7f1a00396cbd055bad6f817fee36576ce483c8bbb8b87b::sudeng::SUDENG",
+    "chain": "Sui"
+  },
+  "CRO": {
+    "contract_address": "0xa0b73e1ff0b80914ab6fe0444e65848c4c34450b",
+    "chain": "Ethereum"
+  },
+  "CRV": {
+    "contract_address": "0xd533a949740bb3306d119cc777fa900ba034cd52",
+    "chain": "Ethereum"
+  },
+  "CTK": {
+    "contract_address": "0xA8c2B8eec3d368C0253ad3dae65a5F2BBB89c929",
+    "chain": "Bsc"
+  },
+  "VVAIFU": {
+    "contract_address": "FQ1tyso61AH1tzodyJfSwmzsD3GToybbRNoZxUBz21p8",
+    "chain": "Solana"
+  },
+  "TWT": {
+    "contract_address": "0x4B0F1812e5Df2A09796481Ff14017e6005508003",
+    "chain": "Bsc"
+  },
+  "CVX": {
+    "contract_address": "0x4e3fbd56cd56c3e72c1403e103b45db9da5b9d2b",
+    "chain": "Ethereum"
+  },
+  "SUSHI": {
+    "contract_address": "0x6b3595068778dd592e39a122f4f5a5cf09c90fe2",
+    "chain": "Ethereum"
+  },
+  "LQTY": {
+    "contract_address": "0x6dea81c8171d0ba574754ef6f8b412f2ed88c54d",
+    "chain": "Ethereum"
+  },
+  "DAO": {
+    "contract_address": "0x0f51bb10119727a7e5eA3538074fb341F56B09Ad",
+    "chain": "Ethereum"
+  },
+  "DBR": {
+    "contract_address": "DBRiDgJAMsM95moTzJs7M9LnkGErpbv9v6CUR1DXnUu5",
+    "chain": "Solana"
+  },
+  "SYNTH": {
+    "contract_address": "0x0721b3C9f19cfeF1d622C918DcD431960f35E060",
+    "chain": "Arbitrum"
+  },
+  "SEND": {
+    "contract_address": "0xb45fcfcc2cc07ce0702cc2d229621e046c906ef14d9b25e8e4d25f6e8763fef7::send::SEND",
+    "chain": "Sui"
+  },
+  "MUBI": {
+    "contract_address": "0x38e382F74dfb84608F3C1F10187f6bEf5951DE93",
+    "chain": "Ethereum"
+  },
+  "UFD": {
+    "contract_address": "eL5fUxj2J4CiQsmW85k5FG9DvuQjjUoBHoQBi2Kpump",
+    "chain": "Solana"
+  },
+  "MYRIA": {
+    "contract_address": "0xA0Ef786Bf476fE0810408CaBA05E536aC800ff86",
+    "chain": "Ethereum"
+  },
+  "TETSUO": {
+    "contract_address": "8i51XNNpGaKaj4G4nDdmQh95v4FKAxw8mhtaRoKd9tE8",
+    "chain": "Solana"
+  },
+  "A8": {
+    "contract_address": "0x3E5A19c91266aD8cE2477B91585d1856B84062dF",
+    "chain": "Ethereum"
+  },
+  "RSS3": {
+    "contract_address": "0xc98d64da73a6616c42117b582e832812e7b8d57f",
+    "chain": "Ethereum"
+  },
+  "AVAAI": {
+    "contract_address": "DKu9kykSfbN5LBfFXtNNDPaX35o4Fv6vJ9FKk7pZpump",
+    "chain": "Solana"
+  },
+  "DF": {
+    "contract_address": "0x431ad2ff6a9c365805ebad47ee021148d6f7dbe0",
+    "chain": "Ethereum"
+  },
+  "UMA": {
+    "contract_address": "0x04Fa0d235C4abf4BcF4787aF4CF447DE572eF828",
+    "chain": "Ethereum"
+  },
+  "COOKIE": {
+    "contract_address": "0xC0041EF357B183448B235a8Ea73Ce4E4eC8c265F",
+    "chain": "Bsc"
+  },
+  "UNI": {
+    "contract_address": "0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984",
+    "chain": "Ethereum"
+  },
+  "ID": {
+    "contract_address": "0x2dfF88A56767223A5529eA5960Da7A3F5f766406",
+    "chain": "Ethereum"
+  },
+  "IO": {
+    "contract_address": "BZLbGTNCSFfoth2GYDtwr7e4imWzpR5jqcUuGEwr646K",
+    "chain": "Solana"
+  },
+  "ARKM": {
+    "contract_address": "0x6E2a43be0B1d33b726f0CA3b8de60b3482b8b050",
+    "chain": "Ethereum"
+  },
+  "PENDLE": {
+    "contract_address": "0x808507121b80c02388fad14726482e061b8da827",
+    "chain": "Ethereum"
+  },
+  "USA": {
+    "contract_address": "69kdRLyP5DTRkpHraaSZAQbWmAwzF9guKjZfzMXzcbAs",
+    "chain": "Solana"
+  },
+  "L3": {
+    "contract_address": "0x88909D489678dD17aA6D9609F89B0419Bf78FD9a",
+    "chain": "Ethereum",
+    "minimum_spread": 4
+  },
+  "CGPT": {
+    "contract_address": "0x9840652DC04fb9db2C43853633f0F62BE6f00f98",
+    "chain": "Bsc"
+  },
+  "CETUS": {
+    "contract_address": "0x06864a6f921804860930db6ddbe2e16acdf8504495ea7481637a1c8b9a8fe54b::cetus::CETUS",
+    "chain": "Sui"
+  },
+  "NEIROCTO": {
+    "contract_address": "0x812Ba41e071C7b7fA4EBcFB62dF5F45f6fA853Ee",
+    "chain": "Ethereum"
+  },
+  "ME": {
+    "contract_address": "MEFNBXixkEbait3xn9bkm8WsJzXtVsaJEn4c8Sam21u",
+    "chain": "Solana"
+  },
+  "NC": {
+    "contract_address": "B89Hd5Juz7JP2dxCZXFJWk4tMTcbw7feDhuWGb3kq5qE",
+    "chain": "Solana"
+  },
+  "NS": {
+    "contract_address": "0x5145494a5f5100e645e4b0aa950fa6b68f614e8c59e17bc5ded3495123a79178::ns::NS",
+    "chain": "Sui"
+  },
+  "KOMA": {
+    "contract_address": "0xd5eaAaC47bD1993d661bc087E15dfb079a7f3C19",
+    "chain": "Bsc"
+  },
+  "OP": {
+    "contract_address": "0x4200000000000000000000000000000000000042",
+    "chain": "Optimism"
+  },
+  "BUSD": {
+    "contract_address": "0x4fabb145d64652a948d72533023f6e7a623c7c53",
+    "chain": "Ethereum"
+  },
+  "VR": {
+    "contract_address": "0x7d5121505149065b562C789A0145eD750e6E8cdD",
+    "chain": "Ethereum"
+  },
+  "LAVA": {
+    "contract_address": "0x11e969e9B3f89cB16D686a03Cd8508C9fC0361AF",
+    "chain": "Arbitrum"
+  },
+  "BUZZ": {
+    "contract_address": "9DHe3pycTuymFk4H4bbPoAJ4hQrr2kaLDF6J6aAKpump",
+    "chain": "Solana"
+  },
+  "AAVE": {
+    "contract_address": "0x7fc66500c84a76ad7e9c93437bfc5ac33e2ddae9",
+    "chain": "Ethereum"
+  },
+  "MELANIA": {
+    "contract_address": "FUAfBo2jgks6gB4Z4LfZkqSZgzNucisEHqnNebaRxM1P",
+    "chain": "Solana"
+  },
+  "USUAL": {
+    "contract_address": "0xC4441c2BE5d8fA8126822B9929CA0b81Ea0DE38E",
+    "chain": "Ethereum"
+  },
+  "ORDER": {
+    "contract_address": "0xABD4C63d2616A5201454168269031355f4764337",
+    "chain": "Ethereum"
+  },
+  "ULTI": {
+    "contract_address": "0x0E7779e698052f8fe56C415C3818FCf89de9aC6D",
+    "chain": "Bsc"
+  },
+  "BEER": {
+    "contract_address": "AujTJJ7aMS8LDo3bFzoyXDwT3jBALUbu4VZhzZdTZLmG",
+    "chain": "Solana"
+  },
+  "ELF": {
+    "contract_address": "0xbf2179859fc6D5BEE9Bf9158632Dc51678a4100e",
+    "chain": "Ethereum"
+  },
+  "ENA": {
+    "contract_address": "0x57e114B691Db790C35207b2e685D4A43181e6061",
+    "chain": "Ethereum"
+  },
+  "ENS": {
+    "contract_address": "0xC18360217D8F7Ab5e7c516566761Ea12Ce7F9D72",
+    "chain": "Ethereum"
+  },
+  "VRA": {
+    "contract_address": "0xf411903cbc70a74d22900a5de66a2dda66507255",
+    "chain": "Ethereum"
+  },
+  "MEME": {
+    "contract_address": "0xb131f4A55907B10d1F0A50d8ab8FA09EC342cd74",
+    "chain": "Ethereum"
+  },
+  "GOMINING": {
+    "contract_address": "0x7Ddc52c4De30e94Be3A6A0A2b259b2850f421989",
+    "chain": "Ethereum"
+  },
+  "PNUT": {
+    "contract_address": "2qEHjDLDLbuBgRYvsxhc5D6uDWAivNFZGan56P1tpump",
+    "chain": "Solana"
+  },
+  "ERN": {
+    "contract_address": "0xbbc2ae13b23d715c30720f079fcd9b4a74093505",
+    "chain": "Ethereum"
+  },
+  "VVV": {
+    "contract_address": "0xacfE6019Ed1A7Dc6f7B508C02d1b04ec88cC21bf",
+    "chain": "BASE"
+  },
+  "GRASS": {
+    "contract_address": "Grass7B4RdKfBCjTKgSqnXkqjwiGvQyFbuSCUJr3XXjs",
+    "chain": "Solana"
+  },
+  "SPELL": {
+    "contract_address": "0x090185f2135308bad17527004364ebcc2d37e5f6",
+    "chain": "Ethereum"
+  },
+  "BERT": {
+    "contract_address": "HgBRWfYxEfvPhtqkaeymCQtHCrKE46qQ43pKe8HCpump",
+    "chain": "Solana"
+  },
+  "ZEREBRO": {
+    "contract_address": "8x5VqbHA8D7NkD52uNuS5nnt3PwA8pLD34ymskeSo2Wn",
+    "chain": "Solana"
+  },
+  "NEIROETH": {
+    "contract_address": "0xEE2a03Aa6Dacf51C18679C516ad5283d8E7C2637",
+    "chain": "Ethereum"
+  },
+  "CHEEMS": {
+    "contract_address": "0x0DF0587216a4a1bB7d5082fdc491d93d2dD4B413",
+    "chain": "Bsc"
+  },
+  "FRED": {
+    "contract_address": "CNvitvFnSM5ed6K28RUNSaAjqqz5tX1rA5HgaBN9pump",
+    "chain": "Solana"
+  },
+  "ARCSOL": {
+    "contract_address": "61V8vBaqAGMpgDQi4JcAwo1dmBGHsyhzodcPqnEVpump",
+    "chain": "Solana"
+  },
+  "LUNAI": {
+    "contract_address": "0x55cD6469F597452B5A7536e2CD98fDE4c1247ee4",
+    "chain": "BASE"
+  },
+  "MEMEFI": {
+    "contract_address": "0x506a6fc25f1c7d52ceb06ea44a3114c9380f8e2029b4356019822f248b49e411::memefi::MEMEFI",
+    "chain": "Sui"
+  },
+  "FAI": {
+    "contract_address": "0xb33Ff54b9F7242EF1593d2C9Bcd8f9df46c77935",
+    "chain": "BASE"
+  },
+  "RDNT": {
+    "contract_address": "0x3082CC23568eA640225c2467653dB90e9250AaA0",
+    "chain": "Arbitrum"
+  },
+  "FET": {
+    "contract_address": "0xaea46A60368A7bD060eec7DF8CBa43b7EF41Ad85",
+    "chain": "Ethereum"
+  },
+  "POND": {
+    "contract_address": "0x57b946008913b82e4df85f501cbaed910e58d26c",
+    "chain": "Ethereum"
+  },
+  "POLS": {
+    "contract_address": "0x83e6f1E41cdd28eAcEB20Cb649155049Fac3D5Aa",
+    "chain": "Ethereum"
+  },
+  "FIS": {
+    "contract_address": "0xef3A930e1FfFFAcd2fc13434aC81bD278B0ecC8d",
+    "chain": "Ethereum"
+  },
+  "WLD": {
+    "contract_address": "0x163f8C2467924be0ae7B5347228CABF260318753",
+    "chain": "Ethereum"
+  },
+  "FARM": {
+    "contract_address": "0xa0246c9032bC3A600820415aE600c6388619A14D",
+    "chain": "Ethereum"
+  },
+  "WOO": {
+    "contract_address": "0x4691937a7508860f876c9c0a2a617e7d9e945d4b",
+    "chain": "Ethereum"
+  },
+  "TURBO": {
+    "contract_address": "0xA35923162C49cF95e6BF26623385eb431ad920D3",
+    "chain": "Ethereum"
+  },
+  "FTT": {
+    "contract_address": "0x50d1c9771902476076ecfc8b2a83ad6b9355a4c9",
+    "chain": "Ethereum"
+  },
+  "FUN": {
+    "contract_address": "0x419D0d8BdD9aF5e606Ae2232ed285Aff190E711b",
+    "chain": "Ethereum"
+  },
+  "GEAR": {
+    "contract_address": "0xba3335588d9403515223f109edc4eb7269a9ab5d",
+    "chain": "Ethereum"
+  },
+  "LOOKS": {
+    "contract_address": "0xf4d2888d29d722226fafa5d9b24f9164c092421e",
+    "chain": "Ethereum"
+  },
+  "DADDY": {
+    "contract_address": "4Cnk9EPnW5ixfLZatCPJjDB1PUtcRpVVgTQukm9epump",
+    "chain": "Solana"
+  },
+  "STREAM": {
+    "contract_address": "STREAMribRwybYpMmSYoCsQUdr6MZNXEqHgm7p1gu9M",
+    "chain": "Solana"
+  },
+  "SHIB": {
+    "contract_address": "0x95ad61b0a150d79219dcf64e1e6cc01f0b64c4ce",
+    "chain": "Ethereum"
+  },
+  "TRIAS": {
+    "contract_address": "0x184cff0e719826b966025F93e05d8C8b0a79b3F9",
+    "chain": "Bsc"
+  },
+  "XAI": {
+    "contract_address": "0x4Cb9a7AE498CEDcBb5EAe9f25736aE7d428C9D66",
+    "chain": "Arbitrum"
+  },
+  "VISTA": {
+    "contract_address": "0xC9bCa88B04581699fAb5aa276CCafF7Df957cbbf",
+    "chain": "Ethereum"
+  },
+  "XCN": {
+    "contract_address": "0xA2cd3D43c775978A96BdBf12d733D5A1ED94fb18",
+    "chain": "Ethereum"
+  },
+  "GEMS": {
+    "contract_address": "0x3010ccb5419F1EF26D40a7cd3F0d707a0fa127Dc",
+    "chain": "Ethereum"
+  },
+  "GENE": {
+    "contract_address": "GENEtH5amGSi8kHAtQoezp1XEXwZJ8vcuePYnXdKrMYz",
+    "chain": "Solana"
+  },
+  "DSYNC": {
+    "contract_address": "0xf94e7d0710709388bCe3161C32B4eEA56d3f91CC",
+    "chain": "Ethereum"
+  },
+  "LINGO": {
+    "contract_address": "0xfb42Da273158B0F642F59F2Ba7cc1d5457481677",
+    "chain": "BASE"
+  },
+  "GFM": {
+    "contract_address": "E1jCTXdkMRoawoWoqfbhiNkkLbxcSHPssMo36U84pump",
+    "chain": "Solana"
+  },
+  "SHRUB": {
+    "contract_address": "0x3b991130eaE3CcA364406D718DA22FA1C3E7C256",
+    "chain": "Ethereum"
+  },
+  "SWARMS": {
+    "contract_address": "74SBV4zDXxTRgv1pEMoECskKBkZHc2yGPnc7GYVepump",
+    "chain": "Solana"
+  },
+  "LUCE": {
+    "contract_address": "CBdCxKo9QavR9hfShgpEBG3zekorAeD7W1jfq2o3pump",
+    "chain": "Solana"
+  },
+  "GHX": {
+    "contract_address": "0x728f30fa2f100742C7949D1961804FA8E0B1387d",
+    "chain": "Ethereum"
+  },
+  "GME": {
+    "contract_address": "8wXtPeU6557ETkp9WHFY1n1EcU6NxDvbAggHGsMYiHsB",
+    "chain": "Solana"
+  },
+  "GMX": {
+    "contract_address": "0xfc5A1A6EB076a2C7aD06eD22C90d7E710E35ad0a",
+    "chain": "Arbitrum"
+  },
+  "GNO": {
+    "contract_address": "0x6810e776880C02933D47DB1b9fc05908e5386b96",
+    "chain": "Ethereum"
+  },
+  "GNS": {
+    "contract_address": "0xE5417Af564e4bFDA1c483642db72007871397896",
+    "chain": "Polygon"
+  },
+  "SHOGGOTH": {
+    "contract_address": "H2c31USxu35MDkBrGph8pUDUnmzo2e4Rf4hnvL2Upump",
+    "chain": "Solana"
+  },
+  "POWER": {
+    "contract_address": "0x429F0d8233e517f9acf6F0C8293BF35804063a83",
+    "chain": "Ethereum"
+  },
+  "GPS": {
+    "contract_address": "0x0C1dC73159e30c4b06170F2593D3118968a0DCa5",
+    "chain": "BASE"
+  },
+  "GPU": {
+    "contract_address": "0x1258D60B224c0C5cD888D37bbF31aa5FCFb7e870",
+    "chain": "Ethereum"
+  },
+  "GRT": {
+    "contract_address": "0xc944e90c64b2c07662a292be6244bdf05cda44a7",
+    "chain": "Ethereum"
+  },
+  "GST": {
+    "contract_address": "AFbX8oGjGpmVFywbVouvhQSRmiW2aR1mohfahi4Y2AdB",
+    "chain": "Solana"
+  },
+  "GTC": {
+    "contract_address": "0xde30da39c46104798bb5aa3fe8b9e0e1f348163f",
+    "chain": "Ethereum"
+  },
+  "XVS": {
+    "contract_address": "0xcf6bb5389c92bdda8a3747ddb454cb7a64626c63",
+    "chain": "Bsc"
+  },
+  "BGSC": {
+    "contract_address": "0xa4B68D48D7bc6f04420e8077E6F74bdeF809dEa3",
+    "chain": "Bsc"
+  },
+  "HIGH": {
+    "contract_address": "0x5f4bde007dc06b867f86ebfe4802e34a1ffeed63",
+    "chain": "Bsc"
+  },
+  "HIFI": {
+    "contract_address": "0x4b9278b94a1112cAD404048903b8d343a810B07e",
+    "chain": "Ethereum"
+  },
+  "HAT": {
+    "contract_address": "AxGAbdFtdbj2oNXa4dKqFvwHzgFtW9mFHWmd7vQfpump",
+    "chain": "Solana"
+  },
+  "TLOS": {
+    "contract_address": "0x193f4A4a6ea24102F49b931DEeeb931f6E32405d",
+    "chain": "Ethereum"
+  },
+  "ONDO": {
+    "contract_address": "0xfAbA6f8e4a5E8Ab82F62fe7C39859FA577269BE3",
+    "chain": "Ethereum"
+  },
+  "HINT": {
+    "contract_address": "0x91dA780BC7f4B7Cf19ABE90411a2a296Ec5FF787",
+    "chain": "BASE"
+  },
+  "KISHU": {
+    "contract_address": "0xa2b4c0af19cc16a6cfacce81f192b024d625817d",
+    "chain": "Ethereum"
+  },
+  "YFI": {
+    "contract_address": "0x0bc529c00c6401aef6d220be8c6ea1667f6ad93e",
+    "chain": "Ethereum"
+  },
+  "MOODENG": {
+    "contract_address": "ED5nyyWEzpPPiWimP8vYm7sD7TD3LAt3Q3gRTWHzPJBY",
+    "chain": "Solana"
+  },
+  "YGG": {
+    "contract_address": "0x25f8087ead173b73d6e8b84329989a8eea16cf73",
+    "chain": "Ethereum"
+  },
+  "SYRUP": {
+    "contract_address": "0x643C4E15d7d62Ad0aBeC4a9BD4b001aA3Ef52d66",
+    "chain": "Ethereum",
+    "minimum_spread": 4
+  },
+  "FORTH": {
+    "contract_address": "0x77fba179c79de5b7653f68b5039af940ada60ce0",
+    "chain": "Ethereum"
+  },
+  "YNE": {
+    "contract_address": "7D1iYWfhw2cr9yBZBFE6nZaaSUvXHqG5FizFFEZwpump",
+    "chain": "Solana"
+  },
+  "HNT": {
+    "contract_address": "hntyVP6YFm1Hg25TN9WGLqM12b8TQmcknKrdu1oxWux",
+    "chain": "Solana"
+  },
+  "ETHFI": {
+    "contract_address": "0xFe0c30065B384F05761f15d0CC899D4F9F9Cc0eB",
+    "chain": "Ethereum"
+  },
+  "HOT": {
+    "contract_address": "0x6c6ee5e31d828de241282b9606c8e98ea48526e2",
+    "chain": "Ethereum"
+  },
+  "CHILLGUY": {
+    "contract_address": "Df6yfrKC8kZE3KNkrHERKzAetSxbrWeniQfyJY4Jpump",
+    "chain": "Solana"
+  },
+  "TRISIG": {
+    "contract_address": "BLDiYcvm3CLcgZ7XUBPgz6idSAkNmWY6MBbm8Xpjpump",
+    "chain": "Solana"
+  },
+  "MYRO": {
+    "contract_address": "HhJpBhRRn4g56VsyLuT8DL5Bv31HkXqsrahTTUCZeZg4",
+    "chain": "Solana"
+  },
+  "XYRO": {
+    "contract_address": "0x4eDDb15A0abfa2c349e8065aF9214E942d9A6D36",
+    "chain": "Ethereum"
+  },
+  "1INCH": {
+    "contract_address": "0x111111111117dc0aa78b770fa6a738034120c302",
+    "chain": "Ethereum"
+  },
+  "TAIKO": {
+    "contract_address": "0x10dea67478c5F8C5E2D90e5E9B26dBe60c54d800",
+    "chain": "Ethereum"
+  },
+  "AERO": {
+    "contract_address": "0x940181a94A35A4569E4529A3CDfB74e38FD98631",
+    "chain": "BASE"
+  },
+  "BUTTHOLE": {
+    "contract_address": "CboMcTUYUcy9E6B3yGdFn6aEsGUnYV6yWeoeukw6pump",
+    "chain": "Solana"
+  },
+  "PRCL": {
+    "contract_address": "4LLbsb5ReP3yEtYzmXewyGjcir5uXtKFURtaEUVC2AHs",
+    "chain": "Solana"
+  },
+  "PAAL": {
+    "contract_address": "0x14feE680690900BA0ccCfC76AD70Fd1b95D10e16",
+    "chain": "Ethereum"
+  },
+  "BLAST": {
+    "contract_address": "0xb1a5700fA2358173Fe465e6eA4Ff52E36e88E2ad",
+    "chain": "BLAST"
+  },
+  "ZCX": {
+    "contract_address": "0xc52c326331e9ce41f04484d3b5e5648158028804",
+    "chain": "Ethereum"
+  },
+  "BULLY": {
+    "contract_address": "79yTpy8uwmAkrdgZdq6ZSBTvxKsgPrNqTLvYQBh1pump",
+    "chain": "Solana"
+  },
+  "DODO": {
+    "contract_address": "0x43dfc4159d86f3a37a5a4b3d4580b888ad7d4ddd",
+    "chain": "Ethereum"
+  },
+  "DOGS": {
+    "contract_address": "EQCvxJy4eG8hyHBFsZ7eePxrRsUQSFE_jpptRAYBmcG_DOGS",
+    "chain": "Ton"
+  },
+  "HAPPY": {
+    "contract_address": "HAPPYwgFcjEJDzRtfWE6tiHE9zGdzpNky2FvjPHsvvGZ",
+    "chain": "Solana"
+  },
+  "BICO": {
+    "contract_address": "0xf17e65822b568b3903685a7c9f496cf7656cc6c2",
+    "chain": "Ethereum"
+  },
+  "HMSTR": {
+    "contract_address": "EQAJ8uWd7EBqsmpSWaRdf_I-8R8-XHwh3gsNKhy-UrdrPcUo",
+    "chain": "Ton"
+  },
+  "ZIG": {
+    "contract_address": "0xb2617246d0c6c0087f18703d576831899ca94f01",
+    "chain": "Ethereum"
+  },
+  "STONKS": {
+    "contract_address": "6NcdiK8B5KK2DzKvzvCfqi8EHaEqu48fyEzC8Mm9pump",
+    "chain": "Solana",
+    "minimum_spread": 4
+  },
+  "ZKJ": {
+    "contract_address": "0xC71B5F631354BE6853eFe9C3Ab6b9590F8302e81",
+    "chain": "Ethereum"
+  },
+  "PROM": {
+    "contract_address": "0xfc82bb4ba86045Af6F327323a46E80412b91b27d",
+    "chain": "Ethereum"
+  },
+  "ILV": {
+    "contract_address": "0x767fe9edc9e0df98e07454847909b5e959d7ca0e",
+    "chain": "Ethereum"
+  },
+  "IMX": {
+    "contract_address": "0xf57e7e7c23978c3caec3c3548e3d615c346e79ff",
+    "chain": "Ethereum"
+  },
+  "INJ": {
+    "contract_address": "0xa2B726B1145A4773F68593CF171187d8EBe4d495",
+    "chain": "Bsc"
+  }
+}

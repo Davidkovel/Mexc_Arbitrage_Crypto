@@ -3,6 +3,7 @@ import asyncio
 from spread_mexc_dex.factory import AbstractFactory, ArbitrageFactory
 from aiogram_bot.bot import TelegramBot
 
+from pump_mexc.main_pump_mexc import run_pump
 from utils.logger import *
 from config import settings
 
@@ -35,7 +36,8 @@ async def main():
         # await telegram_bot.send_message('fdsfdsfds', 4294967301)
         await asyncio.gather(
             run_bot(telegram_bot),  # Запуск бота
-            run_arbitrage(factory)  # Запуск менеджера арбитража
+#            run_arbitrage(factory),
+#            run_pump(telegram_bot.send_message)# Запуск менеджера арбитража
         )
     finally:
         pass
