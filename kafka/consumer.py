@@ -113,4 +113,3 @@ class ArbitrageConsumer:
         except Exception as e:
             logger.error(f"Failed to send Telegram message: {e}", exc_info=True)
 
-# ПЛАНИ РАЗОБРАТЬСЯ КАК ОТПРАВИТЬ СООБЩЕНИЕ В ТЕЛЕРГАМ БОТ С ПОМОЩЬЮ КАФКА КОНСЮМЕРА

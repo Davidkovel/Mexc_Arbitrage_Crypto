@@ -1,4 +1,13 @@
 services:
+  telegram_bot:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: telegram_bot
+    environment:
+      - TELEGRAM_BOT_TOKEN=${TELEGRAM_BOT_TOKEN}
+      - KAFKA_SERVER_HOST=${KAFKA_SERVER_HOST}
+
   zookeeper:
     image: confluentinc/cp-zookeeper:7.0.1
     environment:
