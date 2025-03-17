@@ -1,6 +1,6 @@
-spread_mexc_dex/tokens.json
-spread_mexc_dex/backup_all_tokens.json
+storage_json/tokens_part2(second beginning).json
+storage_json/backup_all_tokens.json
 
 # testing prods
-test_prod.py
+tests/test_prod.py
 token_detail.py

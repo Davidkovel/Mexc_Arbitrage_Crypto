@@ -1,7 +1,7 @@
 import asyncio
 
-from spread_mexc_dex.factory import AbstractFactory, ArbitrageFactory
 from aiogram_bot.bot import TelegramBot
+from kafka.consumer import ArbitrageConsumer
 
 from pump_mexc.main_pump_mexc import run_pump
 from utils.logger import *
@@ -17,30 +17,24 @@ async def run_bot(telegram_bot: TelegramBot):
     await telegram_bot.start()
 
 
-async def run_arbitrage(factory: AbstractFactory):
-    """
-    Run the arbitrage manager.
-    """
-    product = factory.create_arbitrage_manager()
-    await product.run_find_arbitrage()
-
-
 async def main():
-    """
-    Run both the bot and the arbitrage manager concurrently.
-    """
     telegram_bot = TelegramBot(token=TELEGRAM_BOT_TOKEN)
 
-    factory = ArbitrageFactory(telegram_bot.send_message)
+    arbitrage_kafka_consumer = ArbitrageConsumer(
+        bootstrap_servers=settings.KAFKA_SERVER_HOST,
+        topic="arbitrage_dex_cex-notifications",
+        group_id="arbitrage_dex_cex-notifications",
+        telegram_bot=telegram_bot
+    )
+
     try:
         # await telegram_bot.send_message('fdsfdsfds', 4294967301)
         await asyncio.gather(
             run_bot(telegram_bot),  # Запуск бота
-#            run_arbitrage(factory),
-#            run_pump(telegram_bot.send_message)# Запуск менеджера арбитража
+            arbitrage_kafka_consumer.start()
         )
     finally:
-        pass
+        await arbitrage_kafka_consumer.stop()
         # await arbitrage_manager.deconstruct_http_client()
         # await telegram_bot.close()
 
@@ -51,9 +45,11 @@ def turn_off_debug():
 
 if __name__ == "__main__":
     print("[INFO] Prod started")
-    asyncio.run(main())
-    # SWFTC
 
+    if not hasattr(settings, 'KAFKA_BOOTSTRAP_SERVERS'):
+        settings.KAFKA_SERVER_HOST = 'localhost:9092'
+
+    asyncio.run(main())
 
 # ПЛАНИ:
 # 1. env файл сделать

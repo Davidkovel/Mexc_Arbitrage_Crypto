@@ -17,12 +17,12 @@ async def cmd_start(message: Message):
         "Hello! This is a bot to find the spread between DEX and CEX exchanges. Wait for the results...")
 
 
-@dex_cex_spread_router.message()
-async def get_thread_id(message: Message):
-    if message.message_thread_id:
-        await message.answer(f"Thread ID: {message.message_thread_id}")
-    else:
-        await message.answer("Это сообщение не из треда.")
+# @dex_cex_spread_router.message()
+# async def get_thread_id(message: Message):
+#     if message.message_thread_id:
+#         await message.answer(f"Thread ID: {message.message_thread_id}")
+#     else:
+#         await message.answer("Это сообщение не из треда.")
 
 
 class TelegramBot:
