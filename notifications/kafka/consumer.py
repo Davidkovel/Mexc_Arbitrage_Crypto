@@ -47,6 +47,7 @@ class ArbitrageConsumer:
 
     async def _consume_messages(self):
         """Main consumption loop"""
+        print(self.consumer_config)
         logger.info(f"Starting to consume messages from topic: {self.topic}")
 
         try:
